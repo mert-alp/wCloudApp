@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-box i {
+    font-size: 28px;
+    color: #fff;
+}
+
+.search-box input {
+    width: 100%;
+    height: 55px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    outline: none;
+    border-radius: 10px;
+    font-size: 22px;
+    color: #fff;
+    padding: 0 48px 0 42px;
+}
+
+.search-box input::placeholder {
+    color: #fff;
+    opacity: 0.8;
+}
+
+.search-box button {
+    margin-left: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 10px;
+    padding: 0 15px;
+    cursor: pointer;
+    font-size: 28px;
+    color: #fff;
+    transition: background 0.3s;
+}
+
+.search-box button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.weather-box {
+    margin: 20px 0;
+}
+
+.weather-box img {
+    width: 60%;
+}
+
+.weather-box .temperature {
+    font-size: 64px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.weather-details div {
+    text-align: center;
+}
+
+.weather-details .text {
+    margin-top: 5px;
+}
+
+/* Clone için stil ayarları */
+#clone-info-weather,
+#clone-info-humidity,
+#clone-info-wind {
+    position: absolute;
+    transform: translateY(-100%);
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#clone-info-weather .weather {
+    transform: translateY(120%);
+    transition: transform 1s ease, opacity 0s;
+    transition-delay: 0s, 2s;
+}
+
+.weather-box:not(.active) #clone-info-weather .weather {
+    opacity: 0;
+    transition-delay: 0s;
+}
+#toggle-button {
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+#toggle-button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
