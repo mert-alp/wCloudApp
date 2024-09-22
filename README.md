@@ -1,5 +1,7 @@
 # Weather App
 
+![image](https://github.com/user-attachments/assets/3a73787c-4c17-46ec-8d48-59dd9d399a22)
+
 ## Description
 This is a simple weather application that allows users to search for the weather in different cities. The app displays the current temperature, weather conditions, humidity, and wind speed. It features a responsive design and a user-friendly interface.
 
